@@ -1,6 +1,6 @@
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-    host     : '103.20.215.198',
+    host     : 'WEBIDC13.znetlive.com',
     user     : 'roomush',
     password : 'Roomush@123#',
     database : 'gdcpul'
