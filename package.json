@@ -1,0 +1,19 @@
+{
+  "name": "gdc_api",
+  "version": "1.0.0",
+  "description": "GDC APi",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "GDC",
+    "Romush"
+  ],
+  "author": "Fayaz Baba",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}
