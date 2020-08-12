@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const bodyParser = require("body-parser");
-const port = process.env.port || 5000;
+const port = process.env.port || 3000;
 
 
 // parse requests of content-type: application/json
@@ -16,5 +16,5 @@ app.get('/test', (req, res) => {
   res.redirect('https://test.edu.in');
 })
 app.listen(port, () => {
-  console.log(`GDC app listening at http://localhost:${port}`)
+  
 })
