@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   res.redirect('https://gdcpulwama.edu.in');
 })
 app.get('/test', (req, res) => {
-  res.redirect('https://test.edu.in');
+  res.send('https://test.edu.in');
 })
 app.listen(port, () => {
   
