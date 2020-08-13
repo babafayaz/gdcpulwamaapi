@@ -49,7 +49,7 @@ router.route('/download/:id')
 
         //res.status(200).send(result);
        
-        res.download(path.join(__dirname, '../attachments/123.pdf'), (err)=>{
+        res.download(path.join(__dirname, '../attachments/' + id +".pdf"), (err)=>{
         console.log(err);
         console.log('Your file has been downloaded!')
         });
