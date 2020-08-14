@@ -27,7 +27,7 @@ let sql = "SELECT * FROM user_tbl WHERE username = '"+ USER +"' && password = '"
                 const token = jwt.sign({USER}, jwtKey, {
                 algorithm: "HS256",
                 expiresIn: jwtExpirySeconds,
-            })
+            });
            
             // set the cookie as the token string, with a similar max age as the token
             // here, the max age is in milliseconds, so we multiply by 1000
