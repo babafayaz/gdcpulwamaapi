@@ -24,7 +24,7 @@ let sql = "SELECT * FROM user_tbl WHERE username = '"+ USER +"' && password = '"
         if(results.length){
             res.status(200);
             res.json({"msg": "Valid user name and password "})
-           // res.redirect('/home/dashboard');
+            res.redirect('/');
          }
          else
          {
