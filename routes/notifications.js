@@ -40,16 +40,17 @@ router.route('/notification/:category')
       }); 
 })
 //api for downloading the pdf files /notifications on id passed as params
-router.route('/download/:filename')
+router.route('/download/:id')
   .get(function (req, res) {
-            let fn=[req.params.filename]
-          //  filename=db.query('SELECT filename FROM notification WHERE id = ? ',id ,(err, result) => {
-          //    if (err){
-          //      res.status(500).send(err);
-          //      return;
-         //       }
+            let id=[req.params.id]
+           let resultsql= db.query('SELECT filename FROM notification WHERE id = ? ',id ,(err, result) => {
+              console.log(resultsql)
+              if (err){
+                res.status(500).send(err);
+                return;
+                }
                 //res.status(200).send(result);       
-                res.download(path.join(__dirname, '../attachments/' + filename), (err)=>{
+                res.download(path.join(__dirname, '../attachments/' + id +".pdf"), (err)=>{
                   if (err){
                             res.status(500).send(err);
                             return;
@@ -57,7 +58,7 @@ router.route('/download/:filename')
                 });              
             });
           // res.status(200).send({fn}),
-
+});
 
 
 module.exports = router;
