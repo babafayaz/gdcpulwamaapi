@@ -52,7 +52,7 @@ app.post('/upload', upload.single('file1'), (req, res, next) => {
   console.log(res.req.file.filename)
       return res.status(201).json({
           fileName: res.req.file.filename,
-          message: 'File uploded successfully'
+          message: 'File uploded successfullly'
       });
   } catch (error) {
       console.error(error);
