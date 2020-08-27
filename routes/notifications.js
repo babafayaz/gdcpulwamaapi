@@ -50,7 +50,7 @@ router.route('/download/:id')
                 return;
                 }
                 //res.status(200).send(result);       
-                res.download(path.join(__dirname, '../attachments/' + id +".pdf"), (err)=>{
+                res.download(path.join(__dirname, '../attachments/' + id ), (err)=>{
                   if (err){
                             res.status(500).send(err);
                             return;
